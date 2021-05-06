@@ -1,6 +1,5 @@
-const {Router} = require('express');
-
-const router = Router();
+const express = require('express');
+const router = express.Router();
 
 router.get('/', (req, res) => {
   res.json({
@@ -9,6 +8,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  console.log(req.body);
   // post a log to the database
 });
 
