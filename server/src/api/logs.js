@@ -12,4 +12,4 @@ router.post('/', (req, res) => {
   // post a log to the database
 });
 
-module.exports = Router;
+module.exports = router;
