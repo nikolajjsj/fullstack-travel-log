@@ -1,6 +1,12 @@
-# Things to save in the database
+# The server and API for the App
 
-## Log Entry
+## Commands:
+To run the mongodb database:
+- mongod --config /opt/homebrew/etc/mongod.conf
+
+## Things to save in the database
+
+### Log Entry
 - Title (Text)
 - Description (Text)
 - Image (Text)
