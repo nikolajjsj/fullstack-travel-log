@@ -1,23 +1,23 @@
 import './App.css';
-import Map from './components/map';
+import Map from './components/Map';
 import { fetchLogEntries } from './Api/API'
 import { useEffect, useState } from 'react';
 
 function App() {
   const [logs, updateLogs] = useState([]);
 
+  const fetcEntries = async () => {
+    const entries = await fetchLogEntries();
+    updateLogs(entries);
+  }
+
   useEffect(() => {
-    (async () => {
-      const entries = await fetchLogEntries();
-      console.log(entries);
-    })();
+    fetcEntries();
   }, [])
 
   return (
     <div className="App">
-      <Map
-        logs={logs}
-      />    
+      <Map logs={logs} fetcEntries />    
     </div>
   );
 }
