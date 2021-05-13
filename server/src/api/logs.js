@@ -3,7 +3,7 @@ const router = express.Router();
 
 const LogEntry = require('../models/LogEntry');
 
-router.get('/', async (req, res) => {
+router.get('/', async (req, res, next) => {
   try {
     const allLogs = await LogEntry.find();
     res.json(allLogs);
