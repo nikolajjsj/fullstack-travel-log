@@ -3,10 +3,13 @@ const router = express.Router();
 
 const LogEntry = require('../models/LogEntry');
 
-router.get('/', (req, res) => {
-  res.json({
-    message: 'logs',
-  });
+router.get('/', async (req, res) => {
+  try {
+    const allLogs = await LogEntry.find();
+    res.json(allLogs);
+  } catch (error) {
+    next(error);
+  }
 });
 
 router.post('/', async (req, res, next) => {
