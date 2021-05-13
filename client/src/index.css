@@ -1,8 +1,64 @@
-body {
+* {
   margin: 0;
+  box-sizing: border-box
+} 
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.map-marker {
+  height: 44px;
+  width: 44px;
+  stroke: black;
+  fill: red;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translate(-50%, -100%);
+}
+
+.popup {
+  max-width: 250px;
+  text-align: start;
+  padding: .5rem;
+}
+
+.popup > * {
+  margin: .5rem 0;
+}
+
+.popup__image {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.entry-form label,
+.entry-form input,
+.entry-form textarea,
+.entry-form button {
+  display: block;
+  width: 100%;
+}
+
+.entry-form label,
+.entry-form button {
+  margin-top: 1rem;
+}
+
+.entry-form span {
+  display: block;
+  color: red;
+  font-weight: bold;
+  font-size: .75rem;
+  margin-bottom: 1rem;
+}
+
+.entry-form__error-message {
+  color: red;
 }
