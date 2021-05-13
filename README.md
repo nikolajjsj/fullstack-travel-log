@@ -17,5 +17,5 @@ https://www.youtube.com/watch?v=5pQsl9u_10M&t=14s
 - node
 
 ### To run the server and React app (client), locally.
-Server: `npm run dev`, within the server folder
-Client: `npm start`, within the client folder
+- Server: `npm run dev`, within the server folder
+- Client: `npm start`, within the client folder
